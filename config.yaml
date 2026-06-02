@@ -1,0 +1,21 @@
+model:
+  pose:
+    name: mediapipe
+    min_detection_confidence: 0.5
+    min_tracking_confidence: 0.5
+  
+  amputation_classifier:
+    model_path: "models/amputation_classifier.pkl"
+    confidence_threshold: 0.7
+
+prosthetics:
+  images_path: "prosthetics/"
+  default_color: [0, 255, 0]
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  debug: false
+
+database:
+  path: "database/prosthetics.db"
